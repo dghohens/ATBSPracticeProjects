@@ -51,6 +51,18 @@ def printTable2(list_of_lists):
     pass
 
 
+def printTable3(list_of_lists):
+    z = 0
+    for i in list_of_lists:
+        for j in i:
+            if len(j) > z:
+                z = len(j)
+    for i in range(len(list_of_lists[0])):
+        print()
+        for j in range(len(list_of_lists)):
+            print(list_of_lists[j][i].rjust(z), end = ' ')
+    pass
+
 tableData = [['apples', 'oranges', 'cherries', 'banana'],
              ['Alice', 'Bob', 'Carol', 'David'],
              ['dogs', 'cats', 'moose', 'goose']]
@@ -58,3 +70,5 @@ tableData = [['apples', 'oranges', 'cherries', 'banana'],
 printTable(tableData)
 print()
 printTable2(tableData)
+print()
+printTable3(tableData)
